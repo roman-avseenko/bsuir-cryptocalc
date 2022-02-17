@@ -33,16 +33,16 @@
       <form action="/euklid" method="POST" class="form w-25 mt-2">
         <div class="mb-3">
           <label for="exampleInputBase" class="form-label">Input base</label>
-          <input type="number" class="form-control" id="exampleInputBase" name="base_value" required>
+          <input type="number" class="form-control" id="exampleInputBase" name="base_value" value="{{ base_value }}" required>
         </div>
         <div class="mb-3">
           <label for="exampleInputMod" class="form-label">Input mod</label>
-          <input type="number" class="form-control" id="exampleInputMod" name="mod_value" required>
+          <input type="number" class="form-control" id="exampleInputMod" name="mod_value" value="{{ mod_value }}" required>
         </div>
         <button type="submit" class="btn btn-primary w-100">Calculate</button>
       </form>
       <br>
-      <div class="result w-25">
+      <div class="result w-25 mt-3">
         {% if result %}
         <div class="card">
           <div class="card-header">
@@ -54,12 +54,17 @@
         </div>
         {% endif %}
       </div>
-      <br>
-      <footer class="mt-2">
-        © 2022 <a href="https://github.com/roman-avseenko">Raman Auseyenka</a>,
-        <a href="https://github.com/RoLL1k">Dmitry Kukla</a>
+      <footer class="mt-4">
+          <center>
+            <div class="card-text">© 2022</div>
+            <div>
+              <a class="badge rounded-pill bg-dark text-light" href="https://github.com/roman-avseenko">Raman Auseyenka</a>
+            </div>
+            <div>
+              <a class="badge rounded-pill bg-dark text-light" href="https://github.com/RoLL1k">Dmitry Kukla</a>
+            </div>
+          </center>
       </footer>
-      <hr>
     </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
