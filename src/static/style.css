@@ -1,0 +1,24 @@
+.calculator-options {
+    min-width: 200px;
+}
+
+@media (max-width: 400px) {
+    .form {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 100%!important;
+    }
+
+    .calculator-options-container {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 100%!important;
+        flex-direction: column!important;
+    }
+
+    .result {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 100%!important;
+    }
+}
