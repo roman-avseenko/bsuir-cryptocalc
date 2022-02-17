@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <div class="d-flex flex-column align-items-center mt-2">
+    <div class="d-flex flex-column align-items-center mt-5">
       <div class="d-flex justify-content-center">
         <div><center><h1>Calculators for BSUIR cryptolab</h1></center></div>
       </div>
@@ -46,22 +46,38 @@
         <button type="submit" class="btn btn-primary w-100">Calculate</button>
       </form>
       <br>
-      <div class="result" style="font-size: x-large; font-weight: bold">
+      <div class="result w-25">
         {% if result %}
+        <div class="card">
+          <div class="card-header">
+            Result is:
+          </div>
+          <div class="card-body">
+            <p>
+              Message set is: {{ result[0] }}<br>
+              Common module M: {{ result[1] }}
+            </p>
+            <p class="card-text">
+              M1: {{ result[2] }}<br>
+              M2: {{ result[3] }}
+            </p>
+            <p class="card-text">
+              Reversed M1 by module P: {{ result[4] }}<br>
+              Reversed M2 by module Q: {{ result[5] }}
+            </p>
+            <p class="card-text">x1, x2, x3, x4: {{ result[6] }}</p>
+          </div>
+        </div>
         <div>
-          <h3>Message set is: {{ result[0] }}</h3>
-          <br>
-          <h3>Common module M: {{ result[1] }}</h3>
-          <h3>M1: {{ result[2] }}</h3>
-          <h3>M2: {{ result[3] }}</h3>
-          <h3>Reversed M1 by module P: {{ result[4] }}</h3>
-          <h3>Reversed M2 by module Q: {{ result[5] }}</h3>
-          <h3>x1, x2, x3, x4: {{ result[6] }}</h3>
+          <p>
+
+          </p>
         </div>
         {% endif %}
       </div>
       <footer class="mt-2">
-        © 2022 <a href="https://github.com/roman-avseenko">Raman Auseyenka</a>
+        © 2022 <a href="https://github.com/roman-avseenko">Raman Auseyenka</a>,
+        <a href="https://github.com/RoLL1k">Dmitry Kukla</a>
       </footer>
       <hr>
     </div>

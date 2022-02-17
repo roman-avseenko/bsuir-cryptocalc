@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <div class="d-flex flex-column align-items-center mt-2">
+    <div class="d-flex flex-column align-items-center mt-5">
       <div class="d-flex justify-content-center">
         <div><center><h1>Calculators for BSUIR cryptolab</h1></center></div>
       </div>
@@ -42,35 +42,22 @@
         <button type="submit" class="btn btn-primary w-100">Calculate</button>
       </form>
       <br>
-      <div class="result">
+      <div class="result w-25">
         {% if result %}
-        <div>
-          <h3>Result is:</h3>
+        <div class="card">
+          <div class="card-header">
+            Result is:
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{ result }}</p>
+          </div>
         </div>
-        <br>
-        <h3>
-        <math style="font-weight: bold">
-          <mrow>
-            <mrow>
-              <msup>
-                <mi>{{ result[1] }}</mi>
-                <mn>-1</mn>
-              </msup>
-            </mrow>
-            <mo>mod</mo>
-            <mo>{{ result[2] }}</mo>
-            <mo>=</mo>
-            <mtext>{{ result[0] }}</mtext>
-            <mo>mod</mo>
-            <mtext>{{ result[2] }}</mtext>
-          </mrow>
-        </math>
         {% endif %}
-        </h3>
       </div>
       <br>
       <footer class="mt-2">
-        © 2022 <a href="https://github.com/roman-avseenko">Raman Auseyenka</a>
+        © 2022 <a href="https://github.com/roman-avseenko">Raman Auseyenka</a>,
+        <a href="https://github.com/RoLL1k">Dmitry Kukla</a>
       </footer>
       <hr>
     </div>
