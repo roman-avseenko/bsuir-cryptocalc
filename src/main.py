@@ -1,7 +1,11 @@
 from flask import Flask, render_template, request
 from functions import *
 
-app = Flask(__name__)
+
+app = Flask(
+    __name__,
+    template_folder="templates"
+)
 
 
 @app.route("/", methods=['GET'])
